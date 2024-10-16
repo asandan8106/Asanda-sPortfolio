@@ -1,0 +1,263 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    background-image: url('images/picture.webp'); /* Move the background image here */
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute; /* This will place the navbar relative to the page */
+    top: 0; /* Align it to the top */
+    right: 0; /* Align it to the right corner */
+    display: flex;
+    justify-content: flex-end; /* Push the icons to the right */
+    padding: 15px 30px;
+}
+
+.icon-bar {
+    display: flex;
+    gap: 20px; /* Spacing between icons */
+}
+
+.icon-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.icon-bar a:hover {
+    background-color: #f4ca16;
+    border-radius: 4px;
+}
+
+/* Home Section */
+.container {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.container h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container h1 .name {
+    color: #f4ca16;
+}
+
+.container p.caption {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.button-resume, 
+.button-email {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    display: inline-block;
+    color: white;
+}
+
+.button-resume {
+    background-color: #f4ca16;
+    color: white;
+}
+
+.button-email {
+    background-color: #f4ca16;
+    text-shadow: 1px 1px rgb(173, 132, 132);
+}
+
+.button-resume:hover,
+.button-email:hover {
+    background-color: #f4ca16;
+}
+
+/* Social Icons */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icon-link {
+    color: white;
+    font-size: 30px; /* Adjust the icon size */
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #ffcc00; /* Color change on hover */
+}
+
+.fa {
+    cursor: pointer;
+}
+
+/* Background Image Settings */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* About Section */
+.about-section {
+    padding: 50px;
+    background-color:darkgray;
+    color: #0c0b0b;
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffcc00;
+}
+
+.skills-experience {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills, .experience, .education {
+    width: 30%;
+}
+
+.skills h2, .experience h2, .education h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:#ffcc00;
+}
+
+.skills p, .experience p, .education p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/* styling for contact */
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    background-color:darkgray;
+}
+
+.container{
+    color: #0c0b0b;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    font-size: 20px;
+    color: #fff;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    background-color:#ffcc00;
+}
+
+.contact-form {
+    width: 50%;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #ffcc00;
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 15px;
+    background-color:rgb(134, 134, 134);
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form .btn:hover {
+    background-color: #ffcc00;
+}
