@@ -131,10 +131,19 @@ body {
     background-repeat: no-repeat;
 }
 /* About Section */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100%;
+}
+
 .about-section {
     padding: 50px;
-    background-color:darkgray;
+    background-color: darkgray;
     color: #0c0b0b;
+    min-height: 100vh; /* Full page background */
 }
 
 .about-section h1 {
@@ -147,22 +156,78 @@ body {
 .skills-experience {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .skills, .experience, .education {
     width: 30%;
+    margin-bottom: 20px;
 }
 
 .skills h2, .experience h2, .education h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color:#ffcc00;
+    color: #ffcc00;
 }
 
-.skills p, .experience p, .education p {
-    font-size: 18px;
-    margin-bottom: 10px;
+/* Skill Bars */
+.skill-bar {
+    margin-bottom: 15px;
 }
+
+.skill-bar p {
+    margin: 0;
+}
+
+.bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 25px;
+    background-color: #ffcc00;
+}
+
+.progress.html {
+    width: 95%;
+}
+
+.progress.css {
+    width: 85%;
+}
+
+.progress.js {
+    width: 50%;
+}
+
+.progress.db {
+    width: 90%;
+}
+
+.progress.java {
+    width: 50%;
+}
+
+.progress.cpp {
+    width: 65%;
+}
+
+/* Education Section */
+.education p {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills, .experience, .education {
+        width: 100%;
+    }
 /* styling for contact */
 
 /* Contact Section */
