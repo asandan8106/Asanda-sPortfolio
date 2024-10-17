@@ -361,6 +361,11 @@ body, html {
 .project-section {
     padding: 50px;
     text-align: center;
+    margin-top: 50px;
+}
+
+.project-section > .container {
+    margin-top: 80px;
 }
 
 .project-section h1 {
