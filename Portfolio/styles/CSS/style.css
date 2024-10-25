@@ -12,34 +12,45 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
-    background-image: url('images/picture.webp'); /* Move the background image here */
+    background-image: url('images/picture.webp'); 
     background-size: cover;
 }
 
+ .projects-page {
+    display: block;
+} 
+
+ 
+
 .navbar {
-    position: absolute; /* This will place the navbar relative to the page */
-    top: 0; /* Align it to the top */
-    right: 0; /* Align it to the right corner */
     display: flex;
-    justify-content: flex-end; /* Push the icons to the right */
+    justify-content: flex-end; 
     padding: 15px 30px;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 100%; 
+    z-index: 100; 
+}  
+
+.home-body {
+    display: block;
 }
 
 .icon-bar {
     display: flex;
-    gap: 20px; /* Spacing between icons */
+    gap: 20px; 
 }
 
 .icon-bar a {
-    color: white;
+    color: #e6b800 ;
     text-decoration: none;
     font-size: 20px;
     padding: 10px;
 }
 
 .icon-bar a:hover {
-    background-color: #f4ca16;
+    background-color:white;
     border-radius: 4px;
 }
 
@@ -49,7 +60,8 @@ body {
     color: white;
     position: relative;
     z-index: 1;
-}
+    top: calc(50vh / 2);
+} 
 
 .container h1 {
     font-size: 50px;
@@ -57,8 +69,13 @@ body {
     color: white;
 }
 
-.container h1 .name {
-    color: #f4ca16;
+.container h1 span {
+    color:#e6b800;
+}
+
+.caption span
+{
+    color:#e6b800;
 }
 
 .container p.caption {
@@ -73,9 +90,10 @@ body {
     justify-content: center;
     gap: 20px;
     margin-bottom: 30px;
+    
 }
 
-.button-resume, 
+.button-resume,
 .button-email {
     text-decoration: none;
     padding: 10px 20px;
@@ -86,18 +104,21 @@ body {
 }
 
 .button-resume {
-    background-color: #f4ca16;
-    color: white;
+    background-color:#e6b800;
+    color: puwhite;
+    text-shadow: 1px 1px black;
+    font-weight: 700;
 }
 
 .button-email {
-    background-color: #f4ca16;
-    text-shadow: 1px 1px rgb(173, 132, 132);
+    background-color:#e6b800;
+    font-weight: 700;
+    text-shadow: 1px 1px black; 
 }
 
 .button-resume:hover,
 .button-email:hover {
-    background-color: #f4ca16;
+    background-color: whitesmokes;
 }
 
 /* Social Icons */
@@ -117,7 +138,7 @@ body {
 }
 
 .icon-link:hover {
-    color: #ffcc00; /* Color change on hover */
+    color:#e6b800; /* Color change on hover */
 }
 
 .fa {
@@ -136,32 +157,58 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color:  darkgray;
     height: 100%;
 }
 
 .about-section {
+    background-color:  white;
     padding: 50px;
-    background-color: darkgray;
-    color: #0c0b0b;
-    min-height: 100vh; /* Full page background */
+     color: rgba(255, 255, 255, 0.527);
+    min-height: 100vh; 
 }
 
 .about-section h1 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    color:white;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
 }
-
+.about-section h1  span{
+     color:#e6b800;
+}
 .about-section p {
-    margin-bottom: 50px; /* Spacing between the paragraph and skills/experience sections */
+    margin-bottom: 50px; 
+    color: rgba(0, 0, 0, 0.781);
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .skills-experience {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    background-color: #f5f5f585;
+    border-left: 5px solid#e6b800;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.experience-item {
+    background-color: #f5f5f5;
+    border-left: 5px solid #e6b800;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.experience-item h3 {
+    margin: 0;
+    color: #0c0b0b;
+}
+
+.experience-item p {
+    margin: 5px 0 0;
+    color:#b1900c;
+    ;
+
 }
 
 .skills, .experience, .education {
@@ -172,9 +219,13 @@ body, html {
 .skills h2, .experience h2, .education h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: white;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
-
+.skills h2 span{
+   /* font-family: 'Times New Roman', Times, serif; */
+}
 /* Skill Bars */
 .skill-bar {
     margin-bottom: 15px;
@@ -193,10 +244,40 @@ body, html {
     position: relative;
 }
 
-.progress {
+.progress.html {
     height: 20px;
     border-radius: 25px;
-    background-color: #ffcc00;
+    background-color: rgb(211, 92, 92);
+    position: relative;
+}
+.progress.progress.css {
+    height: 20px;
+    border-radius: 25px;
+    background-color: rgb(86, 86, 163);
+    position: relative;
+}
+.progress.js{
+    height: 20px;
+    border-radius: 25px;
+    background-color: rgb(202, 81, 37);
+    position: relative;
+}
+.progress.SQL{
+    height: 20px;
+    border-radius: 25px;
+    background-color: rgb(122, 122, 54);
+    position: relative;
+}
+.progress.java{
+    height: 20px;
+    border-radius: 25px;
+    background-color: rgb(211, 120, 92);
+    position: relative;
+}
+.progress.cpp{
+    height: 20px;
+    border-radius: 25px;
+    background-color: rgb(66, 135, 145);
     position: relative;
 }
 
@@ -205,23 +286,23 @@ body, html {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: black;
+    color:white;
     font-weight: bold;
 }
 
 .progress.html {
-    width: 95%;
+    width: 85%;
 }
 
 .progress.css {
-    width: 85%;
+    width: 75%;
 }
 
 .progress.js {
     width: 50%;
 }
 
-.progress.db {
+.progress.SQl{
     width: 90%;
 }
 
@@ -236,8 +317,7 @@ body, html {
 /* Education Section - Adding some creativity */
 .education-item {
     background-color: #f5f5f5;
-    border-left: 5px solid #ffcc00;
-    padding: 15px;
+    border-left: 5px solid#e6b800;
     margin-bottom: 10px;
     border-radius: 5px;
 }
@@ -249,7 +329,7 @@ body, html {
 
 .education-item p {
     margin: 5px 0 0;
-    color: #555;
+    color:#e6b800;
 }
 
 /* Responsive Design */
@@ -265,19 +345,18 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 50px;
-    background-color:darkgray;
+    padding: 80px;
+    background-color: white;
+   
 }
 
-.container{
-    color: #0c0b0b;
-}
 
 .contact-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
+    margin-top: 100px;
 }
 
 .contact-info {
@@ -287,11 +366,13 @@ body, html {
 .contact-info h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .contact-info p {
     font-size: 18px;
     line-height: 1.8;
+    color:#e6b800;
 }
 
 .social-icons a {
@@ -305,12 +386,12 @@ body, html {
 }
 
 .social-icons a:hover {
-    background-color:#ffcc00;
+    background-color:darkred;
 }
 
 .contact-form {
     width: 50%;
-    background-color: #f9f9f9;
+    background-color: black;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -319,11 +400,12 @@ body, html {
 .contact-form h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    color:#e6b800;
 }
 
 .contact-form p {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #777;
 }
 
@@ -332,21 +414,25 @@ body, html {
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid#e6b800;
     border-radius: 5px;
     font-size: 16px;
+    color:#e6b800;
+    
 }
 
 .contact-form input:focus, 
 .contact-form textarea:focus {
     border-color: #ffcc00;
+    
+    
 }
 
 .contact-form .btn {
     width: 100%;
     padding: 15px;
-    background-color:rgb(134, 134, 134);
-    color: #fff;
+    background-color:white;
+    color:#e6b800;
     font-size: 18px;
     border: none;
     border-radius: 5px;
@@ -360,17 +446,14 @@ body, html {
 .project-section {
     padding: 50px;
     text-align: center;
-    margin-top: 50px;
-}
-
-.project-section > .container {
-    margin-top: 80px;
+    background-color: white;
 }
 
 .project-section h1 {
     font-size: 36px;
     margin-bottom: 40px;
-    color:  #ffcc00;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .projects {
@@ -378,17 +461,27 @@ body, html {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+.project-cards{
+    display: flex;
+}
 .project-card {
-    background-color: #333; /* Dark card background */
-    color: #ffcc00; /* Yellow text */
+    background-color: #333; 
+    color: #ffcc00; 
     border-radius: 10px;
     width: 30%;
     margin: 20px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    height: 500px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+ .growthorganizationwebsite h2{
+    color:#b1900c;
+ }
 .project-card:hover {
     transform: translateY(-10px); /* Lifts the card on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
@@ -407,6 +500,7 @@ body, html {
 .project-info h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: black;
 }
 
 .project-info p {
@@ -417,17 +511,18 @@ body, html {
 
 .project-link {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffcc00; /* Yellow button */
-    color: #0c0b0b; /* Black text */
+    padding: 10px 20px;;
+    background-color:#b1900c; 
+    color: white; 
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
     border-radius: 5px;
+    
 }
 
 .project-link:hover {
-    background-color: #e6b800; /* Slightly darker yellow on hover */
+    background-color:white; /* Slightly darker yellow on hover */
 }
 
 /* Responsive Design */
@@ -443,7 +538,7 @@ body, html {
 .project-section h1 {
     font-size: 36px;
     margin-bottom: 40px;
-    color:white;
+    color: black;
 }
 
 .projects {
@@ -451,7 +546,10 @@ body, html {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+@media (max-width: 750px) {
+    .projects {
+    }
+  }
 .project-card {
     background-color: #333; /* Dark card background */
     color: white; /* Yellow text */
@@ -490,8 +588,8 @@ body, html {
 .project-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffcc00; /* Yellow button */
-    color: #0c0b0b; /* Black text */
+    background-color:#e6b800; 
+    color: white; 
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
@@ -499,11 +597,18 @@ body, html {
 }
 
 .project-link:hover {
-    background-color: #e6b800; /* Slightly darker yellow on hover */
+    background-color: #e6b800; 
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    .project-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .project-card {
         width: 100%; /* Full width on smaller screens */
     }
