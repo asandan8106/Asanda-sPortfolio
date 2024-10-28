@@ -483,8 +483,8 @@ body, html {
     color:#b1900c;
  }
 .project-card:hover {
-    transform: translateY(-10px); /* Lifts the card on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .project-image {
@@ -522,13 +522,13 @@ body, html {
 }
 
 .project-link:hover {
-    background-color:white; /* Slightly darker yellow on hover */
+    background-color:white; 
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .project-card {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
     }
 }.project-section {
     padding: 50px;
@@ -551,8 +551,8 @@ body, html {
     }
   }
 .project-card {
-    background-color: #333; /* Dark card background */
-    color: white; /* Yellow text */
+    background-color: #333;
+    color: white;
     border-radius: 10px;
     width: 30%;
     margin: 20px;
@@ -561,8 +561,8 @@ body, html {
 }
 
 .project-card:hover {
-    transform: translateY(-10px); /* Lifts the card on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .project-image {
@@ -610,6 +610,7 @@ body, html {
     }
 
     .project-card {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
     }
 }
+/* chatbot styling */
