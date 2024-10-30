@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: #FFD700;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.chat-container {
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header */
+.chat-header {
+    display: flex;
+    align-items: center;
+    background-color: #00796b;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.chat-header img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Chat Box */
+.chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-message, .user-message {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    max-width: 75%;
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bot-message {
+    background-color: #e0f7fa;
+    color: #00796b;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    align-self: flex-end;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: none;
+    align-self: flex-start;
+    padding: 8px;
+    margin: 8px;
+    font-size: 14px;
+    color: #00796b;
+    opacity: 0.7;
+}
+
+/* Input Area */
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input-container input:focus {
+    border-color: #00796b;
+}
+
+.input-container button {
+    background-color: #00796b;
+    border: none;
+    padding: 10px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
