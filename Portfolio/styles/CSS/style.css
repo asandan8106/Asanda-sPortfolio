@@ -45,7 +45,7 @@ body {
 .icon-bar a {
     color: #e6b800 ;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px;
     padding: 10px;
 }
 
@@ -614,74 +614,113 @@ body, html {
     }
 }
 /* chatbot styling */
-/* .Messager .img{
-    width:"500";
-     height:"auto";
-} */
-.chatbot-icon {
-    font-size: 2rem;
-}
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #f5f5f5;
 }
 
-.chatbox-container {
-    width: 500px;
+.chat-container {
+    height:520px;
+    width: 450px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-  
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.faq-container {
+    background-color: #00796b;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    justify-content: space-around;
+}
+
+.faq-container span {
+    font-weight: bold;
+}
+
+.faq-container a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.faq-container a:hover {
+    text-decoration: underline;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    background-color: #00796b;
+    color: white;
+    padding: 10px;
+}
+
+.chat-header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .chat-box {
-    max-height: 500px;
+    flex-grow: 1;
+    padding: 10px;
     overflow-y: auto;
-    margin-bottom: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .bot-message, .user-message {
-    padding: 20px;
+    padding: 8px;
     margin-bottom: 8px;
     border-radius: 8px;
+    max-width: 80%;
 }
 
 .bot-message {
     background-color: #e0f7fa;
     color: #00796b;
-    text-align: left;
-  
+    align-self: flex-start;
 }
 
 .user-message {
     background-color: #d1c4e9;
     color: #512da8;
-    text-align: right;
+    align-self: flex-end;
+}
+
+.input-container {
+    display: flex;
+    border-top: 1px solid #ccc;
 }
 
 input {
     width: calc(100% - 50px);
     padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border: none;
     outline: none;
 }
 
 button {
     width: 50px;
-    padding: 9px;
+    background-color: #00796b;
     border: none;
-    border-radius: 7px;
-    background-color:#e6b800;
-    color: #fff;
     cursor: pointer;
-    text-shadow: 1px 1px black;
-} 
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}

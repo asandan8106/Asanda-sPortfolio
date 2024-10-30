@@ -20,33 +20,37 @@
             <a href="About.html"><i class="fa fa-user"></i></a>
             <a href="project.html"><i class="fa fa-folder"></i></a>
             <a href="contact.html"><i class="fa fa-envelope"></i></a>
-            <a href="chatbot.html"><i class="fa-duotone fa-solid fa-message-dots"></i></a>
+            <a href="chatbot.html"><i class= "fa fa-wechat"></i></a>
     </nav>
 
  
 <body>
-    <section class ="Messager">
-        <header class="Messager-header">
-            <img src="chatbot.png" alt="">
-        <h2>CHATBOT</h2>
-    </header>
-    <div class="chatbot-container">
+        <!-- Chat Header -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="/images/chatbot 2.png" alt="" class="bot-icon" />
+            <span>CHATBOT</span>
+        </div>
+        <div class="faq-container">
+            <span>FAQs:</span>
+            <a href="#" onclick="displayFAQ('What qualification do you have?')"> qualifications</a>
+            <a href="#" onclick="displayFAQ('How can I contact you?')">Contact Support</a>
+            <a href="#" onclick="displayFAQ('Where are you located?')">Location</a>
+        </div>
+
+        <!-- Chat Box -->
         <div class="chat-box" id="chat-box">
             <div class="bot-message">
-                <span>Welcome! I'm here to help. Here are frequently asked questions :</span>
-                <ul>
-                    <li>what are your qualifications?</li>
-                    <li>How can I contact you?</li>
-                    <li>Where are you located?</li>
-                </ul>
+                <span>heyy!, welcome to our ChatBot! Go ahead and send me a message 😊</span>
             </div>
         </div>
-        <input type="text" id="user-input" placeholder="Type your question here..." />
-        <button onclick="sendMessage()">Send</button>
-    </div>
 
+        <!-- Chat Input -->
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Enter your message..." />
+            <button onclick="sendMessage()"><img src="images/send-icon.png" alt="Send"></button>
+        </div>
     </div>
-    </div>
-    </body>
-</body> 
+    <script src="script.js"></script>
+</body>
 </html>
