@@ -521,6 +521,11 @@ body, html {
     
 }
 
+.message-icon {
+    width: 35    px;
+    padding: 3px 8px 3px 3px;
+}
+
 .project-link:hover {
     background-color:white; 
 }
