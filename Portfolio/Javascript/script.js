@@ -16,12 +16,9 @@ function sendMessage() {
         const response = getBotResponse(message);
         displayMessage(response, "bot-message", "/images/chatbot.png");
     }, 500);
-
-    // Clear input field
     userInput.value = "";
 }
 
-// Function to display message with icon in chat box
 function displayMessage(message, className, iconSrc) {
     const messageElement = document.createElement("div");
     messageElement.className = `${className} message`;
@@ -55,9 +52,16 @@ function getBotResponse(input) {
         return "Yes, I can help with web development from scratch!";
     } else if (input.includes("programming languages")) {
         return "I am proficient in HTML, CSS, JavaScript, SQL, C++, and Java.";
-    } else {
+    } else if(input.includes("name")){
+        return "I am Asanda Ngwenya,a Software Developer😊";
+    }else if(input.includes("contact")){
+        return "you can contact me using this email: ngwenyaasanda13@gmail.com or you can navigate to the contaxt page for more information";
+    }else if(input.includes("contact")){
+        return "you can contact me using this email: ngwenyaasanda13@gmail.com or you can navigate to the contaxt page for more information";
+    }else {
         return "I'm here to help! Feel free to ask me anything 😊";
     }
+    
 }
 
 // Function to display a FAQ question in the chat box and get a response
