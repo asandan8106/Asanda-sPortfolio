@@ -30,7 +30,7 @@ function displayMessage(message, className, iconSrc) {
     const iconElement = document.createElement("img");
     iconElement.src = iconSrc;
     iconElement.alt = `${className.includes("bot") ? "Bot" : "User"} Icon`;
-    iconElement.className = "message-icon";
+    iconElement.classList.add("message-icon");
 
     // Add text message
     const textElement = document.createElement("span");
@@ -42,7 +42,7 @@ function displayMessage(message, className, iconSrc) {
 
     // Add the message element to the chat box
     chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to bottom of chat box
+    chatBox.scrollTop = chatBox.scrollHeight; 
 }
 
 // Function to get bot response based on user input

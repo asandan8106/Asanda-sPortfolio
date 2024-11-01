@@ -521,11 +521,6 @@ body, html {
     
 }
 
-.message-icon {
-    width: 35    px;
-    padding: 3px 8px 3px 3px;
-}
-
 .project-link:hover {
     background-color:white; 
 }
@@ -692,7 +687,10 @@ body {
     border-radius: 8px;
     max-width: 80%;
 }
-
+.message-icon {
+    width: 35px;
+    padding: 3px 8px 3px 3px;
+}
 .bot-message {
     background-color: #e0f7fa;
     color: #00796b;
