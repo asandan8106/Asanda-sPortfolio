@@ -3,6 +3,7 @@
 const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
 
+// Function to send the user's message
 function sendMessage() {
     const message = userInput.value.trim();
     if (message === "") return;
@@ -73,6 +74,7 @@ function displayFAQ(question) {
     }, 500);
 }
 
+// Event listener for pressing "Enter" key to send message
 userInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         sendMessage();
