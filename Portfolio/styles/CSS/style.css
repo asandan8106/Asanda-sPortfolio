@@ -118,7 +118,7 @@ body {
 
 .button-resume:hover,
 .button-email:hover {
-    background-color: whitesmokes;
+    background-color:#00796b;
 }
 
 /* Social Icons */
@@ -695,6 +695,36 @@ faq-container {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+}
+.clear-chat {
+    position: absolute;
+    bottom: 80px; /* Adjust based on input-container height */
+    right: 20px;
+    background-color:#e6b800;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+
+.clear-chat:hover {
+    background-color:#00796b;
+}
+.timestamp {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+    text-align: right;
 }
 
 .chat-box {
