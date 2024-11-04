@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio-chatbot</title>
+
+</head>
+
+   <!-- Navigation Bar -->
+
+    <nav class="navbar">
+        <div class="logo">
+    
+        </div>
+        <div class="icon-bar">
+            <a href="index.html"><i class="fa fa-home"></i></a>
+            <a href="About.html"><i class="fa fa-user"></i></a>
+            <a href="project.html"><i class="fa fa-folder"></i></a>
+            <a href="contact.html"><i class="fa fa-envelope"></i></a>
+            <a href="chatbot.html"><i class= "fa fa-wechat"></i></a>
+    </nav>
+
+ 
+<body>
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="/images/chatbot 2.png" alt="" class="bot-icon" />
+            <span>CHATBOT</span>
+        </div>
+        <div class="faq-container">
+            <span>FAQs:</span>
+            <a href="#" onclick="displayFAQ('What is your experience in software development?')"> Experience</a>
+            <a href="#" onclick="displayFAQ('Can you help with web development from scratch?')"> web development</a>
+            <a href="#" onclick="displayFAQ('What programming languages are you proficient in?')">programming languages</a>
+        </div>
+
+    
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">
+                <img src="/images/chatbot.png" style="width: 30px; height: 30px;"alt=" " class="message-icon">
+                <span>heyy!, welcome to our ChatBot! Go ahead and send me a message 😊</span>
+            </div>
+        </div>
+
+        
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Enter your message..." />
+            <button onclick="sendMessage()"><img src="images/send-icon.png" alt="Send"></button>
+        </div>
+    </div>
+    <script src="Javascript/script.js"></script>
+</body>
+</html>
