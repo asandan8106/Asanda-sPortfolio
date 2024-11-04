@@ -43,7 +43,7 @@ body {
 }
 
 .icon-bar a {
-    color: #e6b800 ;
+    color: #e6b800;;
     text-decoration: none;
     font-size: 24px;
     padding: 10px;
@@ -70,12 +70,12 @@ body {
 }
 
 .container h1 span {
-    color:#e6b800;
+    color:#e6b800;;
 }
 
 .caption span
 {
-    color:#e6b800;
+    color: #e6b800;
 }
 
 .container p.caption {
@@ -386,7 +386,7 @@ body, html {
 }
 
 .social-icons a:hover {
-    background-color:darkred;
+    background-color:#e6b800;
 }
 
 .contact-form {
@@ -637,7 +637,7 @@ body {
 }
 
 .faq-container {
-    background-color: #00796b;
+    background-color:#e6b800;
     color: white;
     display: flex;
     align-items: center;
@@ -662,7 +662,7 @@ body {
 .chat-header {
     display: flex;
     align-items: center;
-    background-color: #00796b;
+    background-color:#e6b800;
     color: white;
     padding: 10px;
 }
@@ -717,7 +717,7 @@ input {
 
 button {
     width: 50px;
-    background-color: #00796b;
+    background-color:#e6b800;;
     border: none;
     cursor: pointer;
 }
