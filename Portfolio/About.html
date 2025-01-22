@@ -6,89 +6,156 @@
     <title>Portfolio - About</title>
     <link rel="stylesheet" href="styles/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Page-wide styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .icon-bar a {
+            color: #fff;
+            font-size: 18px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .icon-bar a:hover {
+            color: #ff66b2;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-section h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            color: #666;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .features .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-item .icon {
+            font-size: 40px;
+            color: #ff66b2;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-        
+                <h2 style="color: white;">My Portfolio</h2>
             </div>
             <div class="icon-bar">
                 <a href="index.html"><i class="fa fa-home"></i></a>
                 <a href="About.html"><i class="fa fa-user"></i></a>
                 <a href="project.html"><i class="fa fa-folder"></i></a>
                 <a href="contact.html"><i class="fa fa-envelope"></i></a>
-                <a href="chatbot.html"><i class= "fa fa-wechat"></i></a>
-                
-              </div>
+                <a href="chatbot.html"><i class="fa fa-wechat"></i></a>
+            </div>
         </nav>
     </header>
 
     <!-- About Section -->
     <section class="about-section">
-        <div class="About cointainer">
-            <h1> <Span>A</Span>bout <span>M</span>e</h1>
-            <p>A highly motivated and results-driven IT professional with a Bachelor of Science in Information Technology, currently advancing academic pursuits with an Honors degree. Demonstrates a deep understanding of network administration, software development, and web development, while continuously evolving with the latest technological advancements. With a strong passion for innovation and an unwavering ambition to push the boundaries of IT solutions, I aim to bridge theoretical knowledge with cutting-edge practice. Dedicated to academic excellence and poised to make meaningful contributions to the IT landscape through both research and hands-on expertise."</p>
+        <h1>About Me</h1>
+        <p>
+            A highly motivated and results-driven IT professional with a Bachelor of Science in Information Technology,
+            currently advancing academic pursuits with an Honors degree. Demonstrates a deep understanding of network
+            administration, software development, and web development, while continuously evolving with the latest
+            technological advancements.
+        </p>
+    </section>
 
-           <!-- Skills and Experience Section -->
-           <div class="skills-experience">
-            <div class="skills">
-                <h2> <span>S</span>kills</h2>
-                <div class="skill-bar">
-                    <p>HTML</p>
-                    <div class="bar"><div class="progress html"><span>95%</span></div></div>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa fa-laptop"></i>
                 </div>
-                <div class="skill-bar">
-                    <p>CSS</p>
-                    <div class="bar"><div class="progress css"><span>85%</span></div></div>
-                </div>
-                <div class="skill-bar">
-                    <p>JavaScript</p>
-                    <div class="bar"><div class="progress js"><span>50%</span></div></div>
-                </div>
-                <div class="skill-bar">
-                    <p>SQL</p>
-                    <div class="bar"><div class="progress SQL"><span>90%</span></div></div>
-                </div>
-                <div class="skill-bar">
-                    <p>Java</p>
-                    <div class="bar"><div class="progress java"><span>50%</span></div></div>
-                </div>
-                <div class="skill-bar">
-                    <p>C++</p>
-                    <div class="bar"><div class="progress cpp"><span>65%</span></div></div>
-                </div>
+                <h3>IT Administrator</h3>
+                <p>Expertise in managing IT infrastructures and networks.</p>
             </div>
-
-            <div class="experience">
-                <h2>Experience</h2>
-                <div class="experience-item">
-                <h3>IT Administrator @ Growth Org</h3>
-                <p> 2022 - present</p>
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa fa-code"></i>
+                </div>
+                <h3>Web Developer</h3>
+                <p>Proficient in modern web development technologies.</p>
             </div>
-
-                <div class="experience-item">
-                <h3>Web Developer @ Growth Org</h3>
-                <p>2022 - 2024</p>
-            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa fa-database"></i>
                 </div>
-           
-
-            <div class="education">
-                <h2><span>E</span>ducation</h2>
-                <div class="education-item">
-                    <h3>Bachelor of Science in Information Technology</h3>
-                    <p>Richfield Graduate Institute (2021 - 2023)</p>
-                </div>
-                <div class="education-item">
-                    <h3>Matric</h3>
-                    <p>Elangwane MSTA (2015 - 2019)</p>
-                </div>
+                <h3>SQL Expertise</h3>
+                <p>Strong background in database management and design.</p>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 </body>
 </html>
