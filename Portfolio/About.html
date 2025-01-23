@@ -4,102 +4,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - About</title>
-    <link rel="stylesheet" href="styles/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* Page-wide styling */
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f4f4f9;
         }
 
-        /* Navigation bar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 20px;
+        h1, h2 {
+            color: #ff66b2;
         }
 
-        .icon-bar a {
-            color: #fff;
-            font-size: 18px;
-            margin: 0 10px;
+        a {
             text-decoration: none;
         }
 
-        .icon-bar a:hover {
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .navbar .icon-bar a {
+            color: #fff;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .navbar .icon-bar a:hover {
             color: #ff66b2;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1.5s ease-out;
+            color:#333;
         }
 
         /* About Section */
         .about-section {
-            background-color: #f9f9f9;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             padding: 50px 20px;
-            text-align: center;
+            background-color: white;
+            animation: fadeIn 2s ease-out;
         }
 
-        .about-section h1 {
-            font-size: 36px;
-            color: #333;
+        .about-section .content, .about-section .highlights {
+            flex: 1 1 45%;
+            margin: 10px;
+        }
+
+        .about-section .content h2, .about-section .highlights h2 {
             margin-bottom: 20px;
         }
 
-        .about-section p {
+        .about-section .content p {
             color: #666;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
+            line-height: 1.8;
         }
 
-        /* Features Section */
-        .features {
-            background-color: #fff;
+        .about-section .highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-section .highlights ul li {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .about-section .highlights ul li i {
+            color: #ff66b2;
+            margin-right: 10px;
+        }
+
+        /* Skills Section */
+        .skills-section {
             padding: 50px 20px;
+            background-color: #f9f9f9;
             text-align: center;
         }
 
-        .features .container {
+        .skills-section h2 {
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .skills-container {
             display: flex;
             justify-content: space-around;
-            align-items: center;
             flex-wrap: wrap;
             gap: 20px;
         }
 
-        .feature-item {
-            background-color: #f9f9f9;
+        .skill-card {
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 30%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 30%;
+            animation: fadeIn 2.5s ease-out;
         }
 
-        .feature-item:hover {
+        .skill-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .feature-item .icon {
+        .skill-card .icon {
             font-size: 40px;
             color: #ff66b2;
             margin-bottom: 15px;
+            animation: iconBounce 1s infinite ease-in-out;
         }
 
-        .feature-item h3 {
-            font-size: 24px;
-            color: #333;
+        .skill-card h3 {
             margin-bottom: 10px;
         }
 
-        .feature-item p {
+        /* Timeline Section */
+        .timeline-section {
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        .timeline-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            max-width: 800px;
+            animation: slideIn 2s ease-out;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: #ff66b2;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            animation: fadeIn 2.5s ease-out;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item .date {
+            font-weight: bold;
+            color: #ff66b2;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .timeline-item .details {
             font-size: 16px;
             color: #666;
-            line-height: 1.5;
+        }
+
+        /* Animation Styles */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes iconBounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
         }
     </style>
 </head>
@@ -107,9 +258,7 @@
     <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <h2 style="color: white;">My Portfolio</h2>
-            </div>
+            <h2>My Portfolio</h2>
             <div class="icon-bar">
                 <a href="index.html"><i class="fa fa-home"></i></a>
                 <a href="About.html"><i class="fa fa-user"></i></a>
@@ -120,42 +269,83 @@
         </nav>
     </header>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <h1>About Me</h1>
-        <p>
-            A highly motivated and results-driven IT professional with a Bachelor of Science in Information Technology,
-            currently advancing academic pursuits with an Honors degree. Demonstrates a deep understanding of network
-            administration, software development, and web development, while continuously evolving with the latest
-            technological advancements.
-        </p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Welcome to My About Page</h1>
+        <p>Discover more about my journey, skills, and experiences as a dedicated IT professional.</p>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="feature-item">
-                <div class="icon">
-                    <i class="fa fa-laptop"></i>
-                </div>
-                <h3>IT Administrator</h3>
-                <p>Expertise in managing IT infrastructures and networks.</p>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="content">
+            <h2>Profile Summary</h2>
+            <p>
+                A highly motivated and results-driven IT professional with a Bachelor of Science in Information Technology,
+                currently advancing academic pursuits with an Honors degree. Demonstrates a deep understanding of network
+                administration, software development, and web development, while continuously evolving with the latest
+                technological advancements.
+            </p>
+        </div>
+        <div class="highlights">
+            <h2>Key Highlights</h2>
+            <ul>
+                <li><i class="fa fa-check-circle"></i> Proficient in web development technologies.</li>
+                <li><i class="fa fa-check-circle"></i> Expertise in SQL and database management.</li>
+                <li><i class="fa fa-check-circle"></i> Strong foundation in software development.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="icon"><i class="fa fa-laptop"></i></div>
+                <h3>IT Administration</h3>
+                <p>Managing IT infrastructures and troubleshooting issues efficiently.</p>
             </div>
-            <div class="feature-item">
-                <div class="icon">
-                    <i class="fa fa-code"></i>
-                </div>
-                <h3>Web Developer</h3>
-                <p>Proficient in modern web development technologies.</p>
+            <div class="skill-card">
+                <div class="icon"><i class="fa fa-code"></i></div>
+                <h3>Web Development</h3>
+                <p>Creating responsive and modern web solutions using HTML, CSS, and JavaScript.</p>
             </div>
-            <div class="feature-item">
-                <div class="icon">
-                    <i class="fa fa-database"></i>
-                </div>
+            <div class="skill-card">
+                <div class="icon"><i class="fa fa-database"></i></div>
                 <h3>SQL Expertise</h3>
-                <p>Strong background in database management and design.</p>
+                <p>Expertise in managing relational databases and data structures.</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon"><i class="fa fa-code"></i></div>
+                <h3>Programming Languages</h3>
+                <p>Proficient in Java and C++ for software development.</p>
             </div>
         </div>
     </section>
-</body>
-</html>
+
+   <!-- Timeline Section -->
+<section class="timeline-section">
+    <h2>My Timeline</h2>
+    <div class="timeline-item">
+        <div class="date">2024-Present</div>
+        <div class="title"> COBOL Developer</div>
+        <div class="details"> began an internship @ CAPACITI</div>
+    </div>
+    <div class="timeline-item">
+        <div class="date">2024-Present</div>
+        <div class="title">Honors in IT @ Richield Graduate Institute</div>
+        <div class="details">Contributed as a web developer and IT support, gaining practical experience in the field.</div>
+    </div>
+    <div class="timeline-item">
+        <div class="date">2022-2024</div>
+        <div class="title">Volunteered at Growth Organization</div>
+        <div class="details">Contributed as a web developer and IT support, gaining practical experience in the field</div>
+    </div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="date">2021-2023</div>
+            <div class="title">Bsc IT@ Richield Graduate Institute</div>
+            <div class="details">Completed a Bachelor of Science in Information Technology, specializing in systems engineering .</div>
+        </div>
+    </div>
+</section>
