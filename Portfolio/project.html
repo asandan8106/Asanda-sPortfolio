@@ -31,32 +31,51 @@
 
         /* Navigation Bar */
         .navbar {
-            background-color: #333; /* Black */
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff; /* Transparent black for overlay effect */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
 
-        .navbar .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-        }
+.navbar .icon-bar {
+    display: flex;
+    gap: 25px;
+}
 
-        .navbar .icon-bar a {
-            color: #fff;
-            font-size: 20px;
-            margin: 0 12px;
-            padding: 10px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
+.navbar .icon-bar a {
+    text-decoration: none;
+    color:  rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, background 0.3s;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
 
-        .navbar .icon-bar a:hover {
-            background-color: #f06292; /* Light pink */
-        }
+.navbar .icon-bar a i {
+    margin-right: 8px;
+}
 
+.navbar .icon-bar a:hover {
+    color: #d62828;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar .icon-bar a span {
+    display: inline-block;
+}
+
+.navbar-right a:hover {
+    color: #ff66b2;
+}
         /* Projects Section */
         .project-section {
             padding: 50px 20px;
@@ -181,18 +200,18 @@
 <body class="projects-page">
 
     <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Asanda Ngwenya</div>
-            <div class="icon-bar">
-                <a href="index.html"><i class="fa fa-home"></i></a>
-                <a href="About.html"><i class="fa fa-user"></i></a>
-                <a href="project.html"><i class="fa fa-folder"></i></a>
-                <a href="contact.html"><i class="fa fa-envelope"></i></a>
-                <a href="chatbot.html"><i class="fa fa-wechat"></i></a>
-            </div>
-        </nav>
-    </header>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+        <div class="icon-bar">
+            <a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+            <a href="About.html"><i class="fa fa-user"></i><span>About</span></a>
+            <a href="project.html"><i class="fa fa-folder"></i><span>Projects</span></a>
+            <a href="contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a>
+            <a href="chatbot.html"><i class="fa fa-wechat"></i><span>Chatbot</span></a>
+        </div>
+    </nav>
+</header>
 
     <!-- Projects Section -->
     <section class="project-section">
@@ -214,21 +233,26 @@
 
             <!-- Project 2 -->
             <div class="project-card">
-                <img src="images/Screenshot (109).png" alt="Project 2 Screenshot">
+                <img src="images/Screenshot (151).png" alt="Project 2 Screenshot">
                 <div class="card-content">
-                    <h2>Growth Organization Website</h2>
-                    <p>The Growth Organization offers personalized education solutions, including curriculum development, leadership training, mentorship, and technology integration, fostering creativity, critical thinking, and problem-solving in school children.</p>
+                    <h2>Asanda's chatbot</h2>
+                    <p>The chatbot answers FAQs about your IT services, helping visitors learn about your background, skills, and how to contact you...</p>
                     <a href="https://www.growthorganization.co.za/index.php" class="project-link" target="_blank">View Project</a>
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="project-card">
-                <img src="images/Screenshot (109).png" alt="Project 3 Screenshot">
+                <img src="images/Screenshot (150).png" alt=" project 3 Screenshot">
                 <div class="card-content">
-                    <h2>Growth Organization Website</h2>
-                    <p>The Growth Organization offers personalized education solutions, including curriculum development, leadership training, mentorship, and technology integration, fostering creativity, critical thinking, and problem-solving in school children.</p>
-                    <a href="https://www.growthorganization.co.za/index.php" class="project-link" target="_blank">View Project</a>
+                    <h2>To-Do List</h2>
+                    <p>Add Tasks: Fill out form fields and click "Add Task."
+                        Manage Tasks: Mark as "In Progress" or "Done," delete tasks.
+                        Mood Selection: Choose a mood icon (😊, 😐, 😢) to save.
+                        Notes: Write additional info (doesn't persist).
+                        Local Storage: Saves tasks and mood for future visits.
+                        Future Improvements: Weather API, authentication, and drag-and-drop reordering.</p>
+                    <a href=https://asanda-s-to-do-list.onrender.com class="project-link" target="_blank">View Project</a>
                 </div>
             </div>
         </div>
