@@ -1,48 +1,39 @@
-
-// Get references to the chat box and user input
 const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
 
-// Function to send the user's message
+// Function to send a message
 function sendMessage() {
     const message = userInput.value.trim();
     if (message === "") return;
 
-    // Display user message with user icon
-    displayMessage(message, "user-message", "/images/user.png");
+    displayMessage(message, "user-message", "fas fa-user");
 
-    // Get bot response after a short delay
     setTimeout(() => {
         const response = getBotResponse(message);
-        displayMessage(response, "bot-message", "/images/chatbot.png");
+        displayMessage(response, "bot-message", "fas fa-robot");
     }, 500);
+
     userInput.value = "";
 }
 
-function displayMessage(message, className, iconSrc) {
+// Function to display a message
+function displayMessage(message, className, iconClass) {
     const messageElement = document.createElement("div");
     messageElement.className = `${className} message`;
 
-    // Add image icon
-    const iconElement = document.createElement("img");
-    iconElement.src = iconSrc;
-    iconElement.alt = `${className.includes("bot") ? "Bot" : "User"} Icon`;
-    iconElement.classList.add("message-icon");
+    const iconElement = document.createElement("i");
+    iconElement.className = iconClass;
 
-    // Add text message
     const textElement = document.createElement("span");
     textElement.textContent = message;
 
-    // Append icon and text to the message element
     messageElement.appendChild(iconElement);
     messageElement.appendChild(textElement);
-
-    // Add the message element to the chat box
     chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight; 
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Function to get bot response based on user input
+// Function to get bot response
 function getBotResponse(input) {
     input = input.toLowerCase();
 
@@ -52,29 +43,30 @@ function getBotResponse(input) {
         return "Yes, I can help with web development from scratch!";
     } else if (input.includes("programming languages")) {
         return "I am proficient in HTML, CSS, JavaScript, SQL, C++, and Java.";
-    } else if(input.includes("name")){
-        return "I am Asanda Ngwenya,a Software Developer😊";
-    }else if(input.includes("contact")){
-        return "you can contact me using this email: ngwenyaasanda13@gmail.com or you can navigate to the contaxt page for more information";
-    }else if(input.includes("contact")){
-        return "you can contact me using this email: ngwenyaasanda13@gmail.com or you can navigate to the contaxt page for more information";
-    }else {
+    } else if (input.includes("name")) {
+        return "I am Asanda Ngwenya, a Software Developer 😊";
+    } else if (input.includes("contact")) {
+        return "You can contact me at ngwenyaasanda13@gmail.com.";
+    } else {
         return "I'm here to help! Feel free to ask me anything 😊";
     }
-    
 }
 
-// Function to display a FAQ question in the chat box and get a response
+// Function to display FAQ questions
 function displayFAQ(question) {
-    displayMessage(question, "user-message", "/images/user.png");
-
+    displayMessage(question, "user-message", "fas fa-user");
     setTimeout(() => {
         const response = getBotResponse(question);
-        displayMessage(response, "bot-message", "/images/chatbot.png");
+        displayMessage(response, "bot-message", "fas fa-robot");
     }, 500);
 }
 
-// Event listener for pressing "Enter" key to send message
+// Function to clear all messages
+function clearMessages() {
+    chatBox.innerHTML = "";
+}
+
+// Send message on Enter key press
 userInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         sendMessage();
