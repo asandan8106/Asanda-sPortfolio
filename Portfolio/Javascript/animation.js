@@ -68,5 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
+});
 
 
