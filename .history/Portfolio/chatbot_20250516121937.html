@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+     
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="icon-bar">
+            <a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+            <a href="About.html"><i class="fa fa-user"></i><span>About</span></a>
+            <a href="project.html"><i class="fa fa-folder"></i><span>Projects</span></a>
+            <a href="contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a>
+            <a href="chatbot.html"><i class="fa fa-wechat"></i><span>Chatbot</span></a>
+        </div>
+    </nav>
+</header>
+    <!-- Chatbot Section -->
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <span><i class="fas fa-robot bot-icon"></i> Chatbot</span>
+            <i class="fas fa-trash-alt delete-btn" onclick="clearMessages()"></i>
+        </div>
+
+        <!-- FAQs -->
+        <div class="faq-container">
+            <div class="faq-bubble" onclick="displayFAQ('What is your experience in software development?')">Experience</div>
+            <div class="faq-bubble" onclick="displayFAQ('Can you help with web development?')">Web Development</div>
+            <div class="faq-bubble" onclick="displayFAQ('What programming languages do you know?')">Programming Languages</div>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message message">
+                <i class="fas fa-robot"></i>
+                <span>Hello! Welcome to our chatbot. Ask me anything 😊</span>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="Javascript/script.js"></script>
+</body>
+</html>
