@@ -98,7 +98,7 @@ and many more! check them out!!
 - Git & GitHub  
 - Visual Studio Code  
 - React (in progress)  
-- Node.js (backend skills developing)
+
 
 ---
 
