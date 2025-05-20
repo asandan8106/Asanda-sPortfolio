@@ -273,7 +273,7 @@ body.dark-mode .chat-container {
 body.dark-mode .chat-header h1,
 body.dark-mode .chat-header .bot-icon,
 body.dark-mode .chat-header .delete-btn {
-    color:#b71c1c;
+    color: #fdd835; /* bright color for visibility */
 }
 
 body.dark-mode .faq-container .faq-bubble {

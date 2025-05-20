@@ -72,28 +72,38 @@ userInput.addEventListener("keypress", function(event) {
         sendMessage();
     }
 });
-const themeToggle = document.getElementById("theme-toggle");
-
-function enableDarkMode() {
-  document.body.classList.add("dark-mode");
-  localStorage.setItem("darkMode", "enabled");
-}
-
-function disableDarkMode() {
-  document.body.classList.remove("dark-mode");
-  localStorage.setItem("darkMode", "disabled");
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("darkMode") === "enabled") {
-    enableDarkMode();
-  }
-});
+  const toggleBtn = document.getElementById("darkModeToggle");
 
-themeToggle.addEventListener("click", () => {
-  if (document.body.classList.contains("dark-mode")) {
-    disableDarkMode();
-  } else {
-    enableDarkMode();
+  // Check if dark mode was previously saved
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "enabled") {
+    document.body.classList.add("dark-mode");
   }
+
+  // Toggle dark mode on button click
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // Save user preference
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+    }
+
+    // Optionally toggle button icon/text
+    updateToggleIcon();
+  });
+
+  // Optional: Update icon/text based on mode
+  function updateToggleIcon() {
+    if (document.body.classList.contains("dark-mode")) {
+      toggleBtn.innerHTML = "☀️ Light Mode";
+    } else {
+      toggleBtn.innerHTML = "🌙 Dark Mode";
+    }
+  }
+
+  updateToggleIcon(); // Set correct icon on load
 });
