@@ -13,6 +13,7 @@ Welcome to my personal portfolio repository! This project showcases my **skills*
 - [📞 Contact](#-contact)
 - [🚀 How to Use](#-how-to-use)
 - [🧑‍💻 Deployment](#-deployment)
+- [🔮 Future Plans](#-future-plans)
 
 ---
 
@@ -87,7 +88,7 @@ A minimalist to-do list web app designed to help users stay organized and manage
 - JavaScript  
 
 ---
-
+and many more! check them out!!
 ## 🔧 Skills
 
 **Languages & Tools:**
@@ -124,7 +125,9 @@ To run this project locally:
 ```bash
 git clone https://github.com/asandan8106/Asanda-sPortfolio.git
 cd Asanda-sPortfolio
-
+# Open index.html or run with your preferred web server
 
 🧑‍💻 Deployment
 👉 Live Portfolio: https://asanda-sportfolio2.onrender.com
+
+
