@@ -46,7 +46,7 @@ function getBotResponse(input) {
     } else if (input.includes("name")) {
         return "I am Asanda Ngwenya, a Software Developer 😊";
     } else if (input.includes("contact")) {
-        return "You can contact me at ngwenyaasanda13@gmail.com";
+        return "You can contact me at ngwenyaasanda13@gmail.com ";
     } else {
         return "I'm here to help! Feel free to ask me anything 😊";
     }
