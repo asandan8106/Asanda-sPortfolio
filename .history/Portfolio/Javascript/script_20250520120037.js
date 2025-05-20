@@ -39,6 +39,8 @@ function getBotResponse(input) {
 
     if (input.includes("experience")) {
         return "I have recently completed an IT degree and have skills in HTML, CSS, JavaScript, SQL, C++, COBOL and Java.";
+        if (input.includes("experience")) {
+        return "I have recently completed an IT degree and have skills in HTML, CSS, JavaScript, SQL, C++, COBOL and Java.";
     } else if (input.includes("web development")) {
         return "Yes, I can help with web development from scratch!";
     } else if (input.includes("programming languages")) {
@@ -46,7 +48,7 @@ function getBotResponse(input) {
     } else if (input.includes("name")) {
         return "I am Asanda Ngwenya, a Software Developer 😊";
     } else if (input.includes("contact")) {
-        return "You can contact me at ngwenyaasanda13@gmail.com";
+        return "You can contact me at ngwenyaasanda13@gmail.com.";
     } else {
         return "I'm here to help! Feel free to ask me anything 😊";
     }
